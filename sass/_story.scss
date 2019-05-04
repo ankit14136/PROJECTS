@@ -1,0 +1,113 @@
+.story {
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+    grid-template-columns: repeat(8 , [col-start] minmax(min-content, 1fr) [col-end]) ;
+    &__picture {
+        background-color: var(--color-main-back);
+        
+        grid-column: col-start 1 / col-end 4;
+        display: flex;
+        justify-content: flex-end;
+        @media only screen and (max-width: $bp-small)
+        {
+            justify-content: center;
+        }
+        align-items: center;
+        &-img {
+           width: 100%;
+           @media only screen and (max-width: $bp-small)
+            {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (max-width: $bp-small)
+        {
+            grid-column: col-start 1 / col-end 8;
+        }
+    }
+
+    &__heading-wrapper {
+        @media only screen and (max-width: $bp-small)
+        {
+            display: flex;
+
+        }
+    }
+
+    &__content {
+        background-color: var(--color-main-back);
+        grid-column: col-start 5 / col-end 8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-right: 8rem;
+        padding-left: 4rem;
+        @media only screen and (max-width: $bp-small)
+        {
+            grid-column: col-start 1 / col-end 8;
+            
+        }
+
+        @media only screen and (max-width: 31.25em)
+            {
+                padding: 0 2rem;
+            }
+
+        
+        
+        &-heading {
+            font-family: var(--headings-family);
+            font-weight: 700;
+            font-size: 2.8rem;
+            @media only screen and (max-width: $bp-small)
+            {
+                margin-right: 1.1rem;
+            }
+            @media only screen and (max-width: 31.25em)
+            {
+                font-size: 2.4rem;
+                margin-right: 0.6rem;
+            }
+            
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            background-color: transparent;
+            font-weight: 400;
+            @media only screen and (max-width: $bp-small)
+            {
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (max-width: 31.25em)
+            {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-btn {
+            font-size: 1.3rem;
+            padding: .7rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: var(--color-cta-cyan);
+            border-bottom: 1px solid currentColor;
+            transition: all .2s;
+
+            &:hover {
+                color: white;
+                background-color: var(--color-cta-cyan);
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        }
+
+        &-icon {
+
+        }
+    }
+}

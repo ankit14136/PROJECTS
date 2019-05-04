@@ -1,0 +1,117 @@
+.footer {
+    grid-column: col-start 1 / col-end 8;
+    background-color: var(--color-footer);//37.5
+    display: flex;
+    flex-direction: column;
+    &__image {
+        margin-left: 6.5rem;
+        @media only screen and (max-width: 37.5em)
+        {
+            width: 18rem;
+        }
+    }
+
+    &__location {
+        display: flex;
+        align-items: flex-start;
+        flex: 0 0 30%;
+        &-icon {
+            margin-right: 1.6rem;
+            transform: translateY(5px);
+        }
+
+        &-description {
+            flex: 0 0 80%; 
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.9rem;
+        &-icon {
+            margin-right: 1.6rem;
+            transform: translateY(4px);
+        }
+
+        &-description {
+
+        }
+    }
+}
+
+.logo-wrapper {
+    
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.6rem;
+
+    @media only screen and (max-width: 37.5em)
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem;
+        font-size: 1.4rem;
+        justify-content: space-between;
+
+        & > * {
+            margin-bottom: 2.3rem;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 15%;
+
+    @media only screen and (max-width: 37.5em)
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    &__item {
+        list-style: none;
+        margin-bottom: 0.6rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+
+    &-1 {
+        @media only screen and (max-width: 37.5em)
+        {
+            margin-bottom: 2rem;
+            
+        }
+    }
+
+    &-2 {
+
+    }
+
+}
+
+
+.footer__social {
+    &-icon {
+        font-size: 1.5rem;
+        margin-right: 1.3rem;
+    }
+    @media only screen and (max-width: 37.5em)
+        {
+            align-self: center;
+            
+        }
+}
